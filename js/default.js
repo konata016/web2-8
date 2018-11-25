@@ -52,7 +52,7 @@ var separate_time = function (time) {
     var month = time.getMonth();
     var year = time.getFullYear();
     return [sec, min, hours, days, month, year];
-}
+};
 
 var now = new Date();
 var counter = separate_time(now);
@@ -71,7 +71,7 @@ var separate_time = function (time) {
     var hours = Math.floor((time / 1000 / 60 / 60) % 60);
     var days = Math.floor((time / 1000 / 60 / 60 / 24) % 60);
     return [sec, min, hours, days];
-}
+};
 
 var update = function () {
     var now = new Date();
@@ -85,11 +85,11 @@ var update = function () {
         counter[1] + '分' +
         counter[0] + '秒';
     refresh();
-}
+};
 
 var refresh = function () {
     setTimeout(update, 1000);
-}
+};
 update();
 
 
@@ -163,7 +163,7 @@ var thmubs = document.querySelectorAll('.thumb');
 for (idx in thmubs) {
     thmubs[idx].onclick = function () {
         document.getElementById("bigimg").src = 'img/' + this.dataset.image + '.jpg';
-    }
+    };
 }
 
 document.getElementById('form').onsubmit = function () {
